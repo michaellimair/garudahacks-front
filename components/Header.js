@@ -47,8 +47,9 @@ const iPhoneX = () => Platform.OS === 'ios' && (height === 812 || width === 812 
 class Header extends React.Component {
   handleLeftPress = () => {
     const { back, navigation } = this.props;
-    return (back ? navigation.goBack() : navigation.openDrawer());
+    return (back && navigation.goBack());
   }
+
 
   renderSearch = () => {
     const { navigation } = this.props;
@@ -99,7 +100,7 @@ class Header extends React.Component {
   }
 
   render() {
-    const { back, title, white, transparent, navigation } = this.props;
+    const { back, title, white, transparent, home } = this.props;
     // const { routeName } = navigation.state;
     const noShadow = ["Search", "Categories", "Deals", "Pro", "Profile"].includes(title);
     const headerStyles = [
@@ -115,7 +116,7 @@ class Header extends React.Component {
           style={styles.navbar}
           transparent={transparent}
           rightStyle={{ alignItems: 'center' }}
-          leftStyle={{ flex: 0.3, paddingTop: 2  }}
+          leftStyle={{ flex: !back ? 0.3 : 0, paddingTop: 2  }}
           leftIconName={(back ? 'chevron-left' : 'navicon')}
           leftIconColor={white ? theme.COLORS.WHITE : theme.COLORS.ICON}
           titleStyle={[

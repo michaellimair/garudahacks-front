@@ -13,6 +13,7 @@ import OnboardingScreen from '../screens/Onboarding';
 import ProfileScreen from '../screens/Profile';
 import ProScreen from '../screens/Pro';
 import SettingsScreen from '../screens/Settings';
+import ChatScreen from '../screens/Chat';
 
 import CustomDrawerContent from './Menu';
 import { Icon, Header } from '../components';
@@ -117,16 +118,17 @@ function HomeStack(props) {
   return (
     <Stack.Navigator mode="card" headerMode="screen">
       <Stack.Screen
-        name="Home"
+        name="Your Matches"
         component={HomeScreen}
         options={{
           header: ({ navigation, scene }) => (
             <Header
               search
               tabs
-              title="Home"
+              title="Your Matches"
               navigation={navigation}
               scene={scene}
+              home
             />
           ),
         }}
@@ -139,6 +141,29 @@ function HomeStack(props) {
             <Header back white transparent title="" navigation={navigation} scene={scene} />
           ),
           headerTransparent: true,
+        }}
+      />
+    </Stack.Navigator>
+  );
+}
+
+function ChatStack(props) {
+  return (
+    <Stack.Navigator mode="card" headerMode="screen">
+      <Stack.Screen
+        name="Chat"
+        component={ChatScreen}
+        options={{
+          header: ({ navigation, scene }) => (
+            <Header
+              search
+              tabs
+              title="Chat"
+              navigation={navigation}
+              scene={scene}
+              home
+            />
+          ),
         }}
       />
     </Stack.Navigator>
@@ -342,7 +367,7 @@ function MyTabs() {
       />
       <Tab.Screen
         name="Chat"
-        component={HomeStack}
+        component={ChatStack}
         options={{
           tabBarIcon: ({ focused }) => (
             <FontAwesome5 name="rocketchat" size={24} color="black" />),
