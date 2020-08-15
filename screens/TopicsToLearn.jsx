@@ -35,7 +35,7 @@ export default function TopicsOfKnowledge() {
       <Block flex style={styles.container}>
         <ScrollView>
           <Text bold size={36} style={styles.titleText}>
-            Your topics of knowledge
+            What do you want to learn?
           </Text>
           {categories.map((category) => (
             <TopicCategoryPanel key={category} category={category} />
