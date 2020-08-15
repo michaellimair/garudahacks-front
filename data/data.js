@@ -269,6 +269,5 @@ export default {
       'literature': 'Literature',
       'gender_studies': 'Gender Studies',
     },
-    'other': 'Other',
   }
 }
