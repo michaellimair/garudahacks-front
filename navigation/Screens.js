@@ -19,6 +19,7 @@ import CustomDrawerContent from './Menu';
 import { Icon, Header } from '../components';
 import { Images, materialTheme } from '../constants';
 import SearchScreen from '../screens/Search';
+import TopicsOfKnowledge from '../screens/TopicsOfKnowledge';
 
 const { width } = Dimensions.get('screen');
 
@@ -355,7 +356,7 @@ function MyTabs() {
     <Tab.Navigator>
       <Tab.Screen
         name="Matches"
-        component={HomeStack}
+        component={TopicsOfKnowledge}
         options={{
           tabBarIcon: ({ focused }) => (
             <MaterialCommunityIcons

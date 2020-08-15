@@ -1,12 +1,11 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Block } from 'galio-framework';
+import React from 'react';
+import { Text, Block } from 'galio-framework';
 import TopicCategoryPanel from '../components/TopicCategoryPanel';
 
-function TopicsOfKnowledge() {
+export default function TopicsOfKnowledge() {
   return (
     <Block flex>
-      <Text bold size={16} style={styles.title}>
+      <Text bold size={16}>
         Your topics of knowledge
       </Text>
       <TopicCategoryPanel category="social_science" />

@@ -1,23 +1,21 @@
-import React, { useState, useMemo } from "react";
-import { StyleSheet, TouchableOpacity } from "react-native";
-import PropTypes from "prop-types";
-import { Block, Text } from "galio-framework";
-import categories from "../data/categories";
-import TopicCategoryCard from "./TopicCard";
+import React, { useState, useMemo } from 'react';
+import { StyleSheet, TouchableOpacity } from 'react-native';
+import { Block, Text } from 'galio-framework';
+import categories from '../data/categories';
+import TopicCategoryCard from './TopicCard';
 
 const styles = StyleSheet.create({
   panel: {
-    display: "none",
+    display: 'none',
   },
   panelOpen: {
-    display: "flex",
-    flexWrap: "wrap",
+    display: 'flex',
+    flexWrap: 'wrap',
   },
 });
 
 export default function TopicCategoryPanel({ category }) {
   const [open, setOpen] = useState(false);
-  const styles = useMemo(() => createStyles(open), [open]);
 
   return (
     <Block flex>
@@ -25,14 +23,13 @@ export default function TopicCategoryPanel({ category }) {
         <Text>{category}</Text>
       </TouchableOpacity>
       <Block flex style={open ? styles.panelOpen : styles.panel}>
-        {categories[category].map((topic) => (
-          <TopicCategoryCard topic={topic} />
+        {Object.keys(categories[category]).map((topic) => (
+          <TopicCategoryCard
+            topic={categories[category][topic]}
+            key={categories[category][topic]}
+          />
         ))}
       </Block>
     </Block>
   );
 }
-
-TopicCategoryPanel.propTypes = {
-  category: PropTypes.string.isRequired,
-};
