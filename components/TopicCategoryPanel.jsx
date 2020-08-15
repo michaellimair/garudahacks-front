@@ -1,16 +1,19 @@
-import React, { useState, useMemo } from 'react';
-import { StyleSheet, TouchableOpacity } from 'react-native';
-import { Block, Text } from 'galio-framework';
-import categories from '../data/categories';
-import TopicCategoryCard from './TopicCard';
+import React, { useState, useMemo } from "react";
+import { StyleSheet, TouchableOpacity } from "react-native";
+import { Block, Text } from "galio-framework";
+import categories from "../data/categories";
+import TopicCategoryCard from "./TopicCard";
 
 const styles = StyleSheet.create({
   panel: {
-    display: 'none',
+    display: "none",
   },
   panelOpen: {
-    display: 'flex',
-    flexWrap: 'wrap',
+    display: "flex",
+    flexWrap: "wrap",
+  },
+  titleText: {
+    marginleft: 16,
   },
 });
 
@@ -20,7 +23,7 @@ export default function TopicCategoryPanel({ category }) {
   return (
     <Block flex>
       <TouchableOpacity onPress={() => setOpen(!open)}>
-        <Text>{category}</Text>
+        <Text style={styles.titleText}>{categories[category]}</Text>
       </TouchableOpacity>
       <Block flex style={open ? styles.panelOpen : styles.panel}>
         {Object.keys(categories[category]).map((topic) => (

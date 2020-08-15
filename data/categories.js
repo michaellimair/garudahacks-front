@@ -1,5 +1,6 @@
 export default {
     'social_science': {
+      'social_science': 'Social Science',
       'linguistics': 'Linguistics',
       'law': 'Law',
       'chomsky': 'Noam Chomsky',
@@ -9,16 +10,19 @@ export default {
       'modern_monetary_theory': 'Modern Monetary Theory',
     },
     'arts': {
+      'arts': 'Arts',
       'performing_arts': 'Performing Arts',
       'modern_arts': 'Modern Arts',
       'rennaisance': 'The Rennaisance',
       'baroque_music': 'Baroque Music',
     },
     'engineering': {
+      'engineering': 'Engineering',
       'electrical': 'Electrical',
       'mechanical': 'Mechanical',
     },
     'computer_science': {
+      'computer_science': 'Computer Science',
       'cpp': 'C++',
       'clang': 'C',
       'algorithms': 'Data Structures & Algorithms', 
@@ -28,12 +32,14 @@ export default {
       'react': 'React',
     },
     'science': {
+      'science': 'Science',
       'physics': 'Physics',
       'maths': 'Mathematics',
       'calculus': 'Calculus',
       'linear_algebra': 'Linear Algebra',
     },
     'humanities': {
+      'humanities': 'Humanities',
       'american_history': 'American History',
       'chinese_history': 'Chinese History',
       'stoicism': 'Stoicism',
