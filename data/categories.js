@@ -8,7 +8,7 @@ export default {
       'wallerstein': 'Immanuel Wallerstein',
       'modern_monetary_theory': 'Modern Monetary Theory',
     },
-    arts: {
+    'arts': {
       'performing_arts': 'Performing Arts',
       'modern_arts': 'Modern Arts',
       'rennaisance': 'The Rennaisance',
