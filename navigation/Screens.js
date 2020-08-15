@@ -148,6 +148,27 @@ function HomeStack(props) {
   );
 }
 
+function TopicsOfKnowledgeStack(props) {
+  return (
+    <Stack.Navigator mode="card" headerMode="screen">
+      <Stack.Screen
+        name="Topics of Knowledge"
+        component={TopicsOfKnowledge}
+        options={{
+          header: ({ navigation, scene }) => (
+            <Header
+              title="Topics of Knowledge"
+              navigation={navigation}
+              scene={scene}
+              home
+            />
+          ),
+        }}
+      />
+    </Stack.Navigator>
+  );
+}
+
 function ChatStack(props) {
   return (
     <Stack.Navigator mode="card" headerMode="screen">
@@ -356,7 +377,7 @@ function MyTabs() {
     <Tab.Navigator>
       <Tab.Screen
         name="Matches"
-        component={TopicsOfKnowledge}
+        component={HomeStack}
         options={{
           tabBarIcon: ({ focused }) => (
             <MaterialCommunityIcons
@@ -410,6 +431,13 @@ export default function OnboardingStack(props) {
       <Stack.Screen
         name="Onboarding"
         component={OnboardingScreen}
+        option={{
+          headerTransparent: true,
+        }}
+      />
+      <Stack.Screen
+        name="Topics of Knowledge"
+        component={TopicsOfKnowledge}
         option={{
           headerTransparent: true,
         }}

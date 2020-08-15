@@ -1,7 +1,8 @@
-import React from "react";
-import StyleSheet from "react-native";
-import { Text, Block } from "galio-framework";
-import TopicCategoryPanel from "../components/TopicCategoryPanel";
+import React from 'react';
+import { StyleSheet, FlatList } from 'react-native';
+import { Text, Block } from 'galio-framework';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import TopicCategoryPanel from '../components/TopicCategoryPanel';
 
 const styles = StyleSheet.create({
   titleText: {
@@ -9,18 +10,21 @@ const styles = StyleSheet.create({
   },
 });
 
+const DATA = ['social_science', 'arts', 'engineering', 'computer_science', 'science', 'humanities'];
+
 export default function TopicsOfKnowledge() {
   return (
-    <Block flex>
-      <Text bold size={16} style={styles.titleText}>
-        Your topics of knowledge
-      </Text>
-      <TopicCategoryPanel category="social_science" />
-      <TopicCategoryPanel category="arts" />
-      <TopicCategoryPanel category="engineering" />
-      <TopicCategoryPanel category="computer_science" />
-      <TopicCategoryPanel category="science" />
-      <TopicCategoryPanel category="humanities" />
-    </Block>
+    <SafeAreaView style={{ flex: 1 }}>
+      <Block flex>
+        <Text bold size={16} style={styles.titleText}>
+          Your topics of knowledge
+        </Text>
+        <FlatList
+          data={DATA}
+          renderItem={({ item }) => <TopicCategoryPanel category={item} />}
+          keyExtractor={(item) => item}
+        />
+      </Block>
+    </SafeAreaView>
   );
 }

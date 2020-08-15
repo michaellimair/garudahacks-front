@@ -1,47 +1,50 @@
-import React, { useState } from "react";
-import { StyleSheet } from "react-native";
-import { Block, Button, Text } from "galio-framework";
+import React, { useState } from 'react';
+import { StyleSheet, Dimensions } from 'react-native';
+import { Block, Button, Text } from 'galio-framework';
 
 const stringToColor = (string) => {
   const firstCharAscii = string.charCodeAt(0);
   const colorIndex = firstCharAscii % 6;
   switch (colorIndex) {
     case 0:
-      return "#d81b60";
+      return '#d81b60';
     case 1:
-      return "#7b1fa2";
+      return '#7b1fa2';
     case 2:
-      return "#1976d2";
+      return '#1976d2';
     case 3:
-      return "#00796b";
+      return '#00796b';
     case 4:
-      return "#e65100";
+      return '#e65100';
     default:
-      return "#37474f";
+      return '#37474f';
   }
 };
 
+const { width } = Dimensions.get('screen');
+
 const createStyles = (topic) => {
-  const color1 = "#FFFFFF";
+  const color1 = '#FFFFFF';
   const color2 = stringToColor(topic);
 
   return StyleSheet.create({
     container: {
-      width: "50%",
+      width: width / 2,
+      flex: 0,
       height: 100,
       padding: 16,
     },
     card: {
-      width: "100%",
-      height: "100%",
+      width: '100%',
+      height: '100%',
       backgroundColor: color1,
     },
     text: {
       color: color2,
     },
     cardClicked: {
-      width: "100%",
-      height: "100%",
+      width: '100%',
+      height: '100%',
       backgroundColor: color2,
       color: color1,
     },
