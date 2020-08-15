@@ -9,101 +9,45 @@ import materialTheme from '../constants/Theme';
 const { height, width } = Dimensions.get('window');
 const iPhoneX = () => Platform.OS === 'ios' && (height === 812 || width === 812 || height === 896 || width === 896);
 
-const ChatButton = ({isWhite, style, navigation}) => (
-  <TouchableOpacity style={[styles.button, style]} onPress={() => navigation.navigate('Pro')}>
-    <Icon
-      family="GalioExtra"
-      size={16}
-      name="chat-33"
-      color={theme.COLORS[isWhite ? 'WHITE' : 'ICON']}
-    />
-    <Block middle style={styles.notify} />
-  </TouchableOpacity>
-);
+// const ChatButton = ({isWhite, style, navigation}) => (
+//   <TouchableOpacity style={[styles.button, style]} onPress={() => navigation.navigate('Pro')}>
+//     <Icon
+//       family="GalioExtra"
+//       size={16}
+//       name="chat-33"
+//       color={theme.COLORS[isWhite ? 'WHITE' : 'ICON']}
+//     />
+//     <Block middle style={styles.notify} />
+//   </TouchableOpacity>
+// );
 
-const BasketButton = ({isWhite, style, navigation}) => (
-  <TouchableOpacity style={[styles.button, style]} onPress={() => navigation.navigate('Pro')}>
-    <Icon
-      family="GalioExtra"
-      size={16}
-      name="basket-simple"
-      color={theme.COLORS[isWhite ? 'WHITE' : 'ICON']}
-    />
-    <Block middle style={styles.notify} />
-  </TouchableOpacity>
-);
+// const BasketButton = ({isWhite, style, navigation}) => (
+//   <TouchableOpacity style={[styles.button, style]} onPress={() => navigation.navigate('Pro')}>
+//     <Icon
+//       family="GalioExtra"
+//       size={16}
+//       name="basket-simple"
+//       color={theme.COLORS[isWhite ? 'WHITE' : 'ICON']}
+//     />
+//     <Block middle style={styles.notify} />
+//   </TouchableOpacity>
+// );
 
-const SearchButton = ({isWhite, style, navigation}) => (
-  <TouchableOpacity style={[styles.button, style]} onPress={() => navigation.navigate('Pro')}>
-    <Icon
-      size={16}
-      family="entypo"
-      name="magnifying-glass"
-      color={theme.COLORS[isWhite ? 'WHITE' : 'ICON']}
-    />
-  </TouchableOpacity>
-);
+// const SearchButton = ({isWhite, style, navigation}) => (
+//   <TouchableOpacity style={[styles.button, style]} onPress={() => navigation.navigate('Pro')}>
+//     <Icon
+//       size={16}
+//       family="entypo"
+//       name="magnifying-glass"
+//       color={theme.COLORS[isWhite ? 'WHITE' : 'ICON']}
+//     />
+//   </TouchableOpacity>
+// );
 
 class Header extends React.Component {
   handleLeftPress = () => {
     const { back, navigation } = this.props;
     return (back ? navigation.goBack() : navigation.openDrawer());
-  }
-
-  renderRight = () => {
-    const { white, title, navigation } = this.props;
-
-    if (title === 'Title') {
-      return [
-        <ChatButton key='chat-title' navigation={navigation} isWhite={white} />,
-        <BasketButton key='basket-title' navigation={navigation} isWhite={white} />
-      ]
-    }
-
-    switch (title) {
-      case 'Home':
-        return ([
-          <ChatButton key='chat-home' navigation={navigation} isWhite={white} />,
-          <BasketButton key='basket-home' navigation={navigation} isWhite={white} />
-        ]);
-      case 'Deals':
-        return ([
-          <ChatButton key='chat-categories' navigation={navigation} />,
-          <BasketButton key='basket-categories' navigation={navigation} />
-        ]);
-      case 'Categories':
-        return ([
-          <ChatButton key='chat-categories' navigation={navigation} isWhite={white} />,
-          <BasketButton key='basket-categories' navigation={navigation} isWhite={white} />
-        ]);
-      case 'Category':
-        return ([
-          <ChatButton key='chat-deals' navigation={navigation} isWhite={white} />,
-          <BasketButton key='basket-deals' navigation={navigation} isWhite={white} />
-        ]);
-      case 'Profile':
-        return ([
-          <ChatButton key='chat-profile' navigation={navigation} isWhite={white} />,
-          <BasketButton key='basket-deals' navigation={navigation} isWhite={white} />
-        ]);
-      case 'Product':
-        return ([
-          <SearchButton key='search-product' navigation={navigation} isWhite={white} />,
-          <BasketButton key='basket-product' navigation={navigation} isWhite={white} />
-        ]);
-      case 'Search':
-        return ([
-          <ChatButton key='chat-search' navigation={navigation} isWhite={white} />,
-          <BasketButton key='basket-search' navigation={navigation} isWhite={white} />
-        ]);
-      case 'Settings':
-        return ([
-          <ChatButton key='chat-search' navigation={navigation} isWhite={white} />,
-          <BasketButton key='basket-search' navigation={navigation} isWhite={white} />
-        ]);
-      default:
-        break;
-    }
   }
 
   renderSearch = () => {
@@ -170,7 +114,6 @@ class Header extends React.Component {
           title={title}
           style={styles.navbar}
           transparent={transparent}
-          right={this.renderRight()}
           rightStyle={{ alignItems: 'center' }}
           leftStyle={{ flex: 0.3, paddingTop: 2  }}
           leftIconName={(back ? 'chevron-left' : 'navicon')}
