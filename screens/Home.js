@@ -2,11 +2,12 @@ import React from 'react';
 import { StyleSheet, Dimensions, ScrollView } from 'react-native';
 import { Button, Block, Text, Input, theme } from 'galio-framework';
 
-import { Icon, Product } from '../components/';
+import { Icon, Student } from '../components/';
 import Search from '../components/Search';
 
 const { width } = Dimensions.get('screen');
 import products from '../constants/products';
+import users from '../data/users';
 
 export default class Home extends React.Component {
   renderSearch = () => {
@@ -24,13 +25,13 @@ export default class Home extends React.Component {
 
     return (
       <Block row style={styles.tabs}>
-        <Button shadowless style={[styles.tab, styles.divider]} onPress={() => navigation.navigate('Pro')}>
+        <Button shadowless style={[styles.tab, styles.divider]}>
           <Block row middle>
             <Icon name="grid" family="feather" style={{ paddingRight: 8 }} />
             <Text size={16} style={styles.tabTitle}>Categories</Text>
           </Block>
         </Button>
-        <Button shadowless style={styles.tab} onPress={() => navigation.navigate('Pro')}>
+        <Button shadowless style={styles.tab}>
           <Block row middle>
             <Icon size={16} name="camera-18" family="GalioExtra" style={{ paddingRight: 8 }} />
             <Text size={16} style={styles.tabTitle}>Best Deals</Text>
@@ -46,16 +47,9 @@ export default class Home extends React.Component {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.products}>
         <Block flex>
-          <Product product={products[0]} horizontal />
-          <Product product={products[0]} horizontal />
-          <Product product={products[0]} horizontal />
-          <Product product={products[0]} horizontal />
-          <Block flex row>
-            <Product product={products[1]} style={{ marginRight: theme.SIZES.BASE }} />
-            <Product product={products[2]} />
-          </Block>
-          <Product product={products[3]} horizontal />
-          <Product product={products[4]} full />
+          {Object.keys(users).map((userId) => {
+            return <Student student={users[userId]} horizontal />
+          })}
         </Block>
       </ScrollView>
     )

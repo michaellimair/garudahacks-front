@@ -9,41 +9,6 @@ import materialTheme from '../constants/Theme';
 const { height, width } = Dimensions.get('window');
 const iPhoneX = () => Platform.OS === 'ios' && (height === 812 || width === 812 || height === 896 || width === 896);
 
-// const ChatButton = ({isWhite, style, navigation}) => (
-//   <TouchableOpacity style={[styles.button, style]} onPress={() => navigation.navigate('Pro')}>
-//     <Icon
-//       family="GalioExtra"
-//       size={16}
-//       name="chat-33"
-//       color={theme.COLORS[isWhite ? 'WHITE' : 'ICON']}
-//     />
-//     <Block middle style={styles.notify} />
-//   </TouchableOpacity>
-// );
-
-// const BasketButton = ({isWhite, style, navigation}) => (
-//   <TouchableOpacity style={[styles.button, style]} onPress={() => navigation.navigate('Pro')}>
-//     <Icon
-//       family="GalioExtra"
-//       size={16}
-//       name="basket-simple"
-//       color={theme.COLORS[isWhite ? 'WHITE' : 'ICON']}
-//     />
-//     <Block middle style={styles.notify} />
-//   </TouchableOpacity>
-// );
-
-// const SearchButton = ({isWhite, style, navigation}) => (
-//   <TouchableOpacity style={[styles.button, style]} onPress={() => navigation.navigate('Pro')}>
-//     <Icon
-//       size={16}
-//       family="entypo"
-//       name="magnifying-glass"
-//       color={theme.COLORS[isWhite ? 'WHITE' : 'ICON']}
-//     />
-//   </TouchableOpacity>
-// );
-
 class Header extends React.Component {
   handleLeftPress = () => {
     const { back, navigation } = this.props;
@@ -59,7 +24,6 @@ class Header extends React.Component {
         color="black"
         style={styles.search}
         placeholder="What are you looking for?"
-        onFocus={() => navigation.navigate('Pro')}
         iconContent={<Icon size={16} color={theme.COLORS.MUTED} name="magnifying-glass" family="entypo" />}
       />
     )
@@ -70,13 +34,13 @@ class Header extends React.Component {
 
     return (
       <Block row style={styles.tabs}>
-        <Button shadowless style={[styles.tab, styles.divider]} onPress={() => navigation.navigate('Pro')}>
+        <Button shadowless style={[styles.tab, styles.divider]}>
           <Block row middle>
             <Icon name="grid" family="feather" style={{ paddingRight: 8 }} />
             <Text size={16} style={styles.tabTitle}>{tabTitleLeft || 'Categories'}</Text>
           </Block>
         </Button>
-        <Button shadowless style={styles.tab} onPress={() => navigation.navigate('Pro')}>
+        <Button shadowless style={styles.tab}>
           <Block row middle>
             <Icon size={16} name="camera-18" family="GalioExtra" style={{ paddingRight: 8 }} />
             <Text size={16} style={styles.tabTitle}>{tabTitleRight || 'Best Deals'}</Text>

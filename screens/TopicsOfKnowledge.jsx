@@ -1,8 +1,8 @@
-import React from "react";
-import { StyleSheet, ScrollView } from "react-native";
-import { Text, Block, Button } from "galio-framework";
-import { SafeAreaView } from "react-native-safe-area-context";
-import TopicCategoryPanel from "../components/TopicCategoryPanel";
+import React from 'react';
+import { StyleSheet, ScrollView } from 'react-native';
+import { Text, Block, Button } from 'galio-framework';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import TopicCategoryPanel from '../components/TopicCategoryPanel';
 
 const styles = StyleSheet.create({
   container: {
@@ -12,24 +12,24 @@ const styles = StyleSheet.create({
     marginHorizontal: 16,
     marginTop: 80,
     marginBottom: 64,
-    textAlign: "center",
+    textAlign: 'center',
   },
   continue: {
     marginTop: 24,
-    width: "100%",
+    width: '100%',
   },
 });
 
 const categories = [
-  "social_science",
-  "arts",
-  "engineering",
-  "computer_science",
-  "science",
-  "humanities",
+  'social_science',
+  'arts',
+  'engineering',
+  'computer_science',
+  'science',
+  'humanities',
 ];
 
-export default function TopicsOfKnowledge() {
+export default function TopicsOfKnowledge({ navigation }) {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <Block flex style={styles.container}>
@@ -40,7 +40,7 @@ export default function TopicsOfKnowledge() {
           {categories.map((category) => (
             <TopicCategoryPanel key={category} category={category} />
           ))}
-          <Button style={styles.continue}>Continue</Button>
+          <Button style={styles.continue} onPress={() => navigation.replace('App')}>Continue</Button>
         </ScrollView>
       </Block>
     </SafeAreaView>

@@ -158,7 +158,7 @@ export default class Components extends React.Component {
         <Text bold size={16} style={styles.title}>Table Cell</Text>
         <Block style={{ paddingHorizontal: theme.SIZES.BASE }}>
           <Block style={styles.rows}>
-            <TouchableOpacity onPress={() => navigation.navigate('Pro')}>
+            <TouchableOpacity>
               <Block row middle space="between" style={{ paddingTop: 7 }}>
                 <Text size={14}>Manage Options</Text>
                 <Icon name="angle-right" family="font-awesome" style={{ paddingRight: 5 }} />

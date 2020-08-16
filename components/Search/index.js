@@ -23,7 +23,6 @@ const Search = ({ navigation }) => (
     style={styles.search}
     iconContent={iconCamera}
     placeholder="What are you looking for?"
-    onFocus={() => navigation.navigate('Pro')}
   />
 );
 

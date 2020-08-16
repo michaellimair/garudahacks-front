@@ -6,14 +6,14 @@ export default {
       age: 20,
       educationHistory: [
         {
-          name: "BEng(CompSc) Computer Science & Philosophy",
+          name: 'BEng(CompSc) Computer Science & Philosophy',
           institution: 'HKU',
           timeFrom: '2018-08',
           timeTo: '2022-05', // YYYY-MM
           about: 'Learn stuff',
         },
         {
-          name: "CIE A-Level",
+          name: 'CIE A-Level',
           timeFrom: '2016-07',
           timeTo: '2018-06', // YYYY-MM
           about: 'English, Maths, Physics, Biology',
@@ -24,7 +24,7 @@ export default {
       favAccounts: [
         'michaellim',
         'cindyeffendy',
-        'vanessagunadi'
+        'vanessagunadi',
       ],
       favMeetups: [
         '2158765541',
@@ -38,7 +38,7 @@ export default {
       age: 20,
       educationHistory: [
         {
-          name: "BSc CompSc",
+          name: 'BSc CompSc',
           institution: 'CityU',
           timeFrom: '2018-08',
           timeTo: '2022-05', // YYYY-MM
@@ -48,7 +48,7 @@ export default {
       about: 'Full-time SWE, CityU student',
       verified: true,
       favAccounts: [
-        'vanessagunadi'
+        'vanessagunadi',
       ],
       favMeetups: [
         '8474312706',
@@ -57,57 +57,8 @@ export default {
       ],
     },
   },
-  vanessagunadi: {
-    id: 'vanessagunadi',
-    fullName: 'Vanessa Gunadi',
-    age: 20,
-    educationHistory: [
-      {
-        name: "BBA Professional Accounting",
-        institution: 'HKUST',
-        timeFrom: '2018-08',
-        timeTo: '2022-05', // YYYY-MM
-        about: 'Learn stuff',
-      },
-    ],
-    about: 'Passionate about business',
-    verified: true,
-    favAccounts: [
-      'cindyeffendy'
-    ],
-    favMeetups: [
-      '8474312706',
-      '2286704233',
-      '7006569730',
-    ],
-  },
-  cindyeffendy: {
-    id: 'cindyeffendy',
-    fullName: 'Cindy Effendy',
-    age: 20,
-    educationHistory: [
-      {
-        name: "BBA Business",
-        institution: 'HKU',
-        timeFrom: '2018-08',
-        timeTo: '2022-05', // YYYY-MM
-        about: 'Learn stuff',
-      },
-    ],
-    about: 'Aspiring entrepreneur',
-    verified: false,
-    favAccounts: [
-      'vanessagunadi',
-      'adrioalimin',
-      'michaellimair'
-    ],
-    favMeetups: [
-      '7334275040',
-      '2286704233',
-    ],
-  },
   meetups: {
-    '2158765541': {
+    2158765541: {
       title: 'The Politics of Karl Popper',
       description: `
       # The first non-justificational philosophy of criticism in the history of philosophy
@@ -130,19 +81,19 @@ export default {
       location: 'HKU JCSV III Lap-Chee College',
       fixed: true,
       topics: {
-        'social_science': {
-          'linguistics': 'Linguistics',
-          'politics': 'Politics',
+        social_science: {
+          linguistics: 'Linguistics',
+          politics: 'Politics',
         },
-        'humanities': {
-          'philosophy': 'philosophy'
+        humanities: {
+          philosophy: 'philosophy',
         },
       },
       password: '1H4S2fRdzcdpfQrK',
     },
-    '6996341243': {
+    6996341243: {
       title: 'Chomsky and Universal Grammar',
-      description:  `
+      description: `
       # The first non-justificational philosophy of criticism in the history of philosophy
 
       Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
@@ -163,16 +114,16 @@ export default {
       location: 'Universitas Indonesia',
       fixed: true,
       topics: {
-        'social_science': {
-          'linguistics': 'Linguistics',
-          'politics': 'Politics',
+        social_science: {
+          linguistics: 'Linguistics',
+          politics: 'Politics',
         },
-        'humanities': {
-          'philosophy': 'philosophy'
+        humanities: {
+          philosophy: 'philosophy',
         },
-      }
+      },
     },
-    '7006569730': {
+    7006569730: {
       title: 'Redux with React',
       description: `
       # The first non-justificational philosophy of criticism in the history of philosophy
@@ -195,12 +146,12 @@ export default {
       location: 'Singapore Institute of Management',
       fixed: true,
       topics: {
-        'engineering': {
-          'computer_science': 'Computer Science',
-        }
-      }
+        engineering: {
+          computer_science: 'Computer Science',
+        },
+      },
     },
-    '8474312706': {
+    8474312706: {
       title: 'Legal aspects of starting your own small business',
       description: `
       # The first non-justificational philosophy of criticism in the history of philosophy
@@ -223,51 +174,51 @@ export default {
       location: 'Binus University',
       fixed: true,
       topics: {
-        'business': {
-          'entrepreneurship': 'Entrepreneurship',
-          'administration': 'Administration',
-        }
+        business: {
+          entrepreneurship: 'Entrepreneurship',
+          administration: 'Administration',
+        },
       },
       password: '1H4S2fRdzcdpfQrK',
     },
   },
   topics: {
-    'social_science': {
-      'linguistics': 'Linguistics',
-      'law': 'Law',
-      'politics': 'Politics',
-      'sociology': 'Sociology',
-      'journalism': 'Journalism',
+    social_science: {
+      linguistics: 'Linguistics',
+      law: 'Law',
+      politics: 'Politics',
+      sociology: 'Sociology',
+      journalism: 'Journalism',
     },
-    'business': {
-      'entrepreneurship': 'Entrepreneurship',
-      'administration': 'Administration',
-      'law': 'Business Law'
+    business: {
+      entrepreneurship: 'Entrepreneurship',
+      administration: 'Administration',
+      law: 'Business Law',
     },
-    'engineering': {
-      'electrical': 'Electrical',
-      'mechanical': 'Mechanical',
-      'computer_science': 'Computer Science',
-      'chemical': 'Chemical',
+    engineering: {
+      electrical: 'Electrical',
+      mechanical: 'Mechanical',
+      computer_science: 'Computer Science',
+      chemical: 'Chemical',
     },
-    'science': {
-      'physics': 'Physics',
-      'maths': 'Maths',
-      'biology': 'Biology',
-      'chemistry': 'Chemistry',
+    science: {
+      physics: 'Physics',
+      maths: 'Maths',
+      biology: 'Biology',
+      chemistry: 'Chemistry',
     },
-    'arts': {
-      'illustration': 'Illustration',
-      'performing': 'Performing Arts',
-      'music': 'Music',
-      'modern': 'Modern Art',
-      'art_history': 'Art History',
+    arts: {
+      illustration: 'Illustration',
+      performing: 'Performing Arts',
+      music: 'Music',
+      modern: 'Modern Art',
+      art_history: 'Art History',
     },
-    'humanities': {
-      'philosophy': 'Philosophy',
-      'history': 'History',
-      'literature': 'Literature',
-      'gender_studies': 'Gender Studies',
+    humanities: {
+      philosophy: 'Philosophy',
+      history: 'History',
+      literature: 'Literature',
+      gender_studies: 'Gender Studies',
     },
-  }
-}
+  },
+};

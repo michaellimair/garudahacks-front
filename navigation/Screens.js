@@ -124,24 +124,12 @@ function HomeStack(props) {
         options={{
           header: ({ navigation, scene }) => (
             <Header
-              search
-              tabs
               title="Your Matches"
               navigation={navigation}
               scene={scene}
               home
             />
           ),
-        }}
-      />
-      <Stack.Screen
-        name="Pro"
-        component={ProScreen}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header back white transparent title="" navigation={navigation} scene={scene} />
-          ),
-          headerTransparent: true,
         }}
       />
     </Stack.Navigator>
@@ -178,8 +166,6 @@ function ChatStack(props) {
         options={{
           header: ({ navigation, scene }) => (
             <Header
-              search
-              tabs
               title="Chat"
               navigation={navigation}
               scene={scene}
@@ -393,14 +379,6 @@ function MyTabs() {
         options={{
           tabBarIcon: ({ focused }) => (
             <FontAwesome5 name="rocketchat" size={24} color="black" />),
-        }}
-      />
-      <Tab.Screen
-        name="Search"
-        component={SearchStack}
-        options={{
-          tabBarIcon: ({ focused }) => (
-            <AntDesign name="search1" size={24} color="black" />),
         }}
       />
       <Tab.Screen
