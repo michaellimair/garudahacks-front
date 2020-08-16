@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "rn-material-kit-free",
-    "description": "React Native - Material Kit Free",
-    "slug": "rn-material-kit-free",
+    "name": "stoa-garudahacks-2020",
+    "description": "Stoa App made with React Native, by Michael Lim and Adrio Alimin.",
+    "slug": "stoa-garudahacks-2020",
     "privacy": "unlisted",
     "sdkVersion": "37.0.0",
     "platforms": [
